@@ -1,0 +1,55 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #161b22;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    width: 400px;
+    text-align: center;
+}
+
+h1 span {
+    font-size: 0.5em;
+    color: #58a6ff;
+}
+
+.status-card {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #21262d;
+    border-radius: 8px;
+}
+
+.online {
+    color: #3fb950;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.metric {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.bar {
+    background: #30363d;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.fill {
+    background: #58a6ff;
+    height: 100%;
+    border-radius: 4px;
+}

@@ -1,0 +1,11 @@
+# System Architecture
+
+This project follows a modular design to ensure scalability in CI/CD environments.
+
+## Components:
+1. **Core Engine**: Handles the main data processing logic.
+2. **Config Manager**: Manages environment variables and constants.
+3. **Logger**: Tracks system performance and errors.
+
+## Data Flow:
+Data is sampled from the environment, validated against the config, and then processed via the core engine.

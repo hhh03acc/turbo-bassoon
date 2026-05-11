@@ -1,35 +1,38 @@
-# Nexus-Core Sentinel
+# Nexus-Core Sentinel v2.1.0
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
-[![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
+[![Deployment: GitHub Pages](https://img.shields.io/badge/Deployment-Live-brightgreen.svg)](https://hhh03acc.github.io/turbo-bassoon/)
 
-## 🌐 Overview
-**Nexus-Core Sentinel** is a high-performance, modular system diagnostic and monitoring suite. Designed for modern CI/CD pipelines, it provides real-time insights into environment health, dependency integrity, and automated log analysis.
+## 🌐 Live Dashboard
+Access the real-time monitoring interface directly via the link below:
+👉 **[https://hhh03acc.github.io/turbo-bassoon/](https://hhh03acc.github.io/turbo-bassoon/)**
 
-This project bridges the gap between raw system metrics and actionable data through its hybrid Python-Web architecture.
+---
 
 ## 🏗️ Project Architecture
-The project is structured to maintain a clear separation of concerns:
-- **`src/`**: Robust core logic for data processing and node management.
-- **`web/`**: Interactive dashboard for visualizing system metrics (HTML5/CSS3).
-- **`scripts/`**: Automation utilities for environment setup and cleanup.
-- **`tests/`**: Comprehensive test suite ensuring zero-failure deployments.
+**Nexus-Core Sentinel** is a modular system diagnostic suite built for modern CI/CD automation. The repository is organized as follows:
+
+* **`/src`**: Contains the core logic and processing engines (`processor.py`, `config.py`).
+* **`/tests`**: Comprehensive validation and unit testing scripts.
+* **`/docs`**: Detailed technical documentation and architecture overviews.
+* **`/scripts`**: Utility scripts for environment setup and log management.
+* **`Root`**: Interactive Web Dashboard (`index.html`, `style.css`).
 
 ## 🚀 Key Features
-- ✅ **Automated Environment Scanning**: Detects system configuration anomalies instantly.
-- ✅ **Dynamic Web Dashboard**: Real-time status tracking via a dark-themed UI.
-- ✅ **CI/CD Optimization**: Native support for GitHub Actions and automated workflows.
-- ✅ **Detailed Logging**: Persistent log storage for historical data analysis.
+- **Automated Scanning**: Real-time detection of system environment anomalies.
+- **Web-Based UI**: High-fidelity dashboard for tracking system metrics.
+- **CI/CD Ready**: Fully optimized for integration with GitHub Actions.
+- **Persistent Logging**: Automated generation of diagnostic logs.
 
-## 🛠️ Installation & Setup
+## 🛠️ Installation & Execution
 
 ### Prerequisites
 - Python 3.11 or higher.
-- A modern web browser (Brave, Firefox, or Chrome).
+- Active GitHub account for CI/CD integration.
 
 ### Quick Start
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/nexus-core-sentinel.git](https://github.com/your-username/nexus-core-sentinel.git)
-   cd nexus-core-sentinel
+   git clone [https://github.com/hhh03acc/turbo-bassoon.git](https://github.com/hhh03acc/turbo-bassoon.git)
+   cd turbo-bassoon

@@ -1,0 +1,14 @@
+[project]
+name = "core-system-monitor"
+version = "2.1.0"
+description = "Advanced system monitoring and analysis tool"
+authors = [
+    {name = "Ali", email = "dev@example.com"}
+]
+dependencies = [
+    "pytest",
+    "requests"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

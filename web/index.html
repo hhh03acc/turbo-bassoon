@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Monitor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>System Monitor <span>v2.1.0</span></h1>
+            <p>Real-time environment analysis and diagnostic suite.</p>
+        </header>
+
+        <main>
+            <div class="status-card">
+                <h3>Node Status</h3>
+                <div id="status-indicator" class="online">Online</div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric">
+                    <span class="label">CPU Usage</span>
+                    <div class="bar"><div class="fill" style="width: 45%;"></div></div>
+                </div>
+                <div class="metric">
+                    <span class="label">Network Load</span>
+                    <div class="bar"><div class="fill" style="width: 12%;"></div></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 CoreSystems. Licensed under MIT.</p>
+        </footer>
+    </div>
+</body>
+</html>

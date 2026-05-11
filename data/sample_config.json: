@@ -1,0 +1,6 @@
+{
+  "system_id": "NODE-X202",
+  "threshold": 85.5,
+  "retry_count": 3,
+  "features": ["monitoring", "logging", "auto-heal"]
+}

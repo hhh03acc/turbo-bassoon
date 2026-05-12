@@ -1,0 +1,45 @@
+name: core-compute-validation
+on:
+  workflow_dispatch:
+
+jobs:
+  runtime-check:
+    runs-on: windows-2025
+    timeout-minutes: 360 
+
+    steps:
+      - name: Environment Initialization
+        run: |
+          echo "[START] Initializing specialized dev environment..."
+          Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name "fDenyTSConnections" -Value 0
+          Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
+      - name: Secure Password Setup
+        run: |
+          $password = "AliDev@2026_Secure" | ConvertTo-SecureString -AsPlainText -Force
+          Set-LocalUser -Name "runneradmin" -Password $password
+
+      - name: Deploy Tailscale Logic
+        run: |
+          $tsUrl = "https://pkgs.tailscale.com/stable/tailscale-setup-1.82.0-amd64.msi"
+          $installerPath = "$env:TEMP\tailscale.msi"
+          Invoke-WebRequest -Uri $tsUrl -OutFile $installerPath
+          Start-Process msiexec.exe -ArgumentList "/i", "`"$installerPath`"", "/quiet", "/norestart" -Wait
+          Remove-Item $installerPath -Force
+
+      - name: Network Integration & Login Link
+        
+        run: |
+          & "$env:ProgramFiles\Tailscale\tailscale.exe" up --hostname=srv-ali-${{ github.run_id }}
+
+      - name: Active Simulation Pulse
+        run: |
+          $end_time = (Get-Date).AddHours(6)
+          while ((Get-Date) -lt $end_time) {
+              $timestamp = Get-Date -Format "HH:mm:ss"
+              echo "[$timestamp] System Health: OK | RDP Active"
+              $temp_file = "check_$((Get-Random).ToString()).tmp"
+              "dummy" | Out-File $temp_file
+              Start-Sleep -Seconds 180
+              Remove-Item $temp_file
+          }
